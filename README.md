@@ -1,4 +1,7 @@
-## Broadly, it can be understood as follows:
+#vEdaakSharapadeeyaM
+
+##  vEdaakSharapadeeyaM traditionally refers to a treatise or section that analyzes letters (aksaras) and words (padas), detailing their meanings, phonetics, and grammatical usage.
+Broadly, it can be understood as follows:
 Akṣara – The individual letters, which in the Vedic tradition possess independent potency and significance.
 Pada – Words, encompassing their form, grammatical structure, and semantic content.
 Akṣarapadīyam – A scholarly exposition of the power of letters, their combinations into words, their syntactic usage, and Vedic phonetics.
