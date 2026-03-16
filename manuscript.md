@@ -1,3 +1,16 @@
+---
+layout: default
+title: Research
+---
+
+# Research
+
+This section contains research materials related to **vEdaakSharapadeeyaM**.
+
+## Manuscript Studies
+
+[View Manuscript Research Documents](../manuscript)
+
 # Akṣarapadīyam
 ### [वेदाक्षर स्वरूपं (Form Of The Vēdākshara)](Script1.pdf)
 ### [वेदाक्षरोच्चारण (Pronunciation Of The Vēdākshara)](Script2.pdf)
