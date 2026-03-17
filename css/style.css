@@ -65,3 +65,24 @@ font-size:14px;
 font-family:'Noto Serif Devanagari', serif;
 font-size:22px;
 }
+
+h1, h2, h3{
+font-family: Georgia, serif;
+color:#8B0000;
+}
+
+p{
+line-height:1.7;
+font-size:16px;
+}
+
+main{
+border-top:5px solid #FFD700;
+}
+
+/* Section spacing */
+h2{
+margin-top:30px;
+border-bottom:2px solid #eee;
+padding-bottom:5px;
+}
