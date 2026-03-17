@@ -64,6 +64,8 @@ font-size:14px;
 .sanskrit{
 font-family:'Noto Serif Devanagari', serif;
 font-size:22px;
+line-height:1.8;
+color:#8B0000;
 }
 
 h1, h2, h3{
