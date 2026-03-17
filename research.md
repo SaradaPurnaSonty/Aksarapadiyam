@@ -6,7 +6,7 @@ permalink: /research/
 
 # Research
 
-This section contains the manuscript research documents for the **vEdaakSharapadeeyaM** project.
+This section contains the manuscript research documents for the **Akṣarapadīyam** project.
 
 ## Manuscripts
 
