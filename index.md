@@ -5,7 +5,7 @@ title: Home
 
 # Welcome
 
-vEdaakSharapadeeyaM is a research project dedicated to the study of **Vedic akṣaras (letters)** and **padas (words)**. vEdaakSharapadeeyaM traditionally refers to a treatise or section that analyzes letters (aksaras) and words (padas), detailing their meanings, phonetics, and grammatical usage.
+Akṣarapadīyam is a research project dedicated to the study of **Vedic akṣaras (letters)** and **padas (words)**. vEdaakSharapadeeyaM traditionally refers to a treatise or section that analyzes letters (aksaras) and words (padas), detailing their meanings, phonetics, and grammatical usage.
 
 ## Sanskrit Example
 
