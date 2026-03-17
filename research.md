@@ -29,7 +29,7 @@ This section contains the manuscript research documents for the **Akṣarapadīy
 <div class="references">
 
 <div class="citation">
-Sonty, S. P. (2026). *Akṣarapadīyam: A Study of Vedic Akṣaras and Padas*.
+Sonty, S. P. (2025). *Akṣarapadīyam: A Study of Vedic Akṣaras and Padas*.
 </div>
 
 <div class="citation">
