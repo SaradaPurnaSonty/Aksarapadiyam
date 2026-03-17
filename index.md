@@ -7,7 +7,7 @@ title: Home
 
 Akṣarapadīyam is a research project dedicated to the study of **Vedic akṣaras (letters)** and **padas (words)**.
 
-Akṣarapadīyam traditionally refers to a treatise or section that analyzes letters (aksaras) and words (padas), detailing their meanings, phonetics, and grammatical usage.
+Akṣarapadīyam traditionally refers to a treatise or section that analyzes letters (akṣaras) and words (padas), detailing their meanings, phonetics, and grammatical usage
 
 ---
 
@@ -16,8 +16,8 @@ Akṣarapadīyam traditionally refers to a treatise or section that analyzes let
 The project can be broadly understood as:
 
 - **Akṣara** – Individual letters, which in the Vedic tradition possess independent potency and significance  
-- **Pada** – Words, including their grammatical structure and semantic meaning  
-- **Akṣarapadīyam** – A comprehensive study of letters, their combinations, syntactic usage, and Vedic phonetics  
+- **Pada** – Words, encompassing their form, grammatical structure, and semantic content 
+- **Akṣarapadīyam** – A scholarly exposition of the power of letters, their combinations into words, their syntactic usage, and Vedic phonetics. 
 
 ---
 
@@ -40,7 +40,9 @@ Akṣarapadīyam represents a systematic exploration of:
 - Word formation  
 - Grammatical structure  
 - Principles of mantra construction
-In essence, an Akṣarapadīyam constitutes a comprehensive explanation of Vedic letters, word formation, and the principles underlying mantra construction.phonetics, grammar, and meaning in Vedic Sanskrit.
+  
+In essence, an Akṣarapadīyam constitutes a comprehensive explanation of Vedic letters, word formation, and the principles underlying mantra construction.
+
 
 ---
 
