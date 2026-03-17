@@ -1,49 +1,66 @@
 body{
 font-family: Arial, sans-serif;
 margin:0;
-background:#f8f8f8;
+background:#f9f6f2;
 }
 
+/* HEADER */
 header{
-background:#2c3e50;
-color:white;
+background:#8B0000; /* deep red */
+color:#FFD700; /* gold */
 padding:20px;
 text-align:center;
 }
 
-/* Navigation */
+/* LOGO + TITLE */
+.header-container{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+header img{
+height:80px;
+}
+
+/* NAVIGATION */
 nav{
-text-align:center;
 margin-top:15px;
 }
 
 nav a{
-display:inline-block;
-color:white;
-padding:10px 30px;
+color:#FFD700;
+margin:0 25px;
 text-decoration:none;
 font-weight:bold;
-font-size:18px;
+font-size:16px;
 }
 
 nav a:hover{
 text-decoration:underline;
 }
 
+/* MAIN CONTENT */
 main{
 max-width:900px;
-margin:auto;
+margin:30px auto;
 padding:30px;
 background:white;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
+/* FOOTER */
 footer{
+background:#8B0000;
+color:#FFD700;
 text-align:center;
 padding:20px;
 font-size:14px;
-background:#eee;
 }
 
+/* SANSKRIT FONT */
 .sanskrit{
 font-family:'Noto Serif Devanagari', serif;
 font-size:22px;
