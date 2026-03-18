@@ -9,50 +9,39 @@ body{
 header{
     background:#8B0000;
     color:#FFD700;
-    padding:20px 40px;
-    border-bottom:4px solid #FFD700;  /* ✅ GOLD LINE */
+    padding:25px 40px;
+    border-bottom:4px solid #FFD700;
 }
 
 /* HEADER LAYOUT */
 .header-container{
     display:flex;
     align-items:center;
-    justify-content:space-between;
+    justify-content:flex-start;
     position:relative;
 }
 
-/* LOGO LEFT */
+/* LOGO */
 .header-container img{
-    height:110px;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    height:120px;   /* bigger */
+    margin-right:20px;
 }
 
-/* TITLE CENTER */
-.header-container{
-    display:flex;
-    align-items:center;
-    justify-content:flex-start;   /* instead of space-between */
-    position:relative;
-    padding-left:20px;            /* gives breathing space */
-}
+/* CENTER TITLE */
 .header-container div{
     position:absolute;
     left:50%;
     transform:translateX(-50%);
     text-align:center;
-    width:100%;   /* ensures proper centering */
 }
-
 
 /* TITLE */
 header h1{
-    letter-spacing:1px;
-}
-header h1{
-    font-size:34px;
+    font-size:36px;
     margin:5px 0;
     font-family:'Noto Serif Devanagari', serif;
     color:#FFD700;
+    letter-spacing:1px;
 }
 
 /* TEXT */
@@ -142,37 +131,24 @@ h1, h2, h3{
     padding:10px 30px;
 }
 
-/* PDF VIEW */
-#pdfViewer{
-    width:100%;
-    height:calc(100vh - 70px);
-    overflow:auto;
-    text-align:center;
-    background:#333;
-}
-
-#pdfViewer canvas{
-    background:white;
-    box-shadow:0 0 20px rgba(0,0,0,0.6);
-    max-width:900px;
-    width:100%;
-}
-
 #pdfViewer{
     width:100%;
     height:calc(100vh - 70px);
     overflow:auto;
     background:#222;
     display:flex;
-    justify-content:center;   /* center horizontally */
+    justify-content:center;
     align-items:flex-start;
     padding-top:20px;
 }
 
+/* SINGLE CLEAN CANVAS STYLE */
 #pdfViewer canvas{
     background:white;
-    box-shadow:0 0 15px rgba(0,0,0,0.5);
+    box-shadow:0 0 20px rgba(0,0,0,0.6);
     border-radius:4px;
+    max-width:850px;
+    width:auto;
 }
 
 /* BUTTONS */
