@@ -170,12 +170,12 @@ openPDF(currentIndex);
 
 function zoomIn(){
 scale += 0.2;
-renderPDF(pdfs[currentIndex]);
+renderPage(1);
 }
 
 function zoomOut(){
-scale = Math.max(1, scale - 0.2);
-renderPDF(pdfs[currentIndex]);
+scale = Math.max(0.5, scale - 0.2);
+renderPage(1);
 }
 </script>
 
