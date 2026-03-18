@@ -1,1 +1,212 @@
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f9f6f2;
+}
 
+/* HEADER */
+header{
+background:#8B0000;
+color:#FFD700;
+padding:20px;
+text-align:center;
+}
+
+/* LOGO + TITLE */
+.header-container{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+header img{
+height:80px;
+}
+
+/* NAVIGATION */
+nav{
+margin-top:15px;
+}
+
+nav a{
+color:#FFD700;
+margin:0 25px;
+text-decoration:none;
+font-weight:bold;
+font-size:16px;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+/* MAIN CONTENT */
+main{
+max-width:900px;
+margin:30px auto;
+padding:30px;
+background:white;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+border-top:5px solid #FFD700;
+}
+
+/* FOOTER */
+footer{
+background:#8B0000;
+color:#FFD700;
+text-align:center;
+padding:20px;
+font-size:14px;
+}
+
+/* SANSKRIT TEXT */
+.sanskrit{
+font-family:'Noto Serif Devanagari', serif;
+font-size:22px;
+line-height:1.8;
+color:#8B0000;
+}
+
+/* HEADINGS */
+h1, h2, h3{
+font-family: Georgia, serif;
+color:#8B0000;
+}
+
+/* PARAGRAPH */
+p{
+line-height:1.7;
+font-size:16px;
+}
+
+/* SECTION SPACING */
+h2{
+margin-top:30px;
+border-bottom:2px solid #eee;
+padding-bottom:5px;
+}
+
+/* REFERENCES */
+.references{
+font-size:14px;
+line-height:1.6;
+border-top:2px solid #ccc;
+margin-top:30px;
+padding-top:15px;
+}
+
+.citation{
+margin-bottom:10px;
+}
+
+/* MANUSCRIPT BUTTONS */
+.manuscripts{
+text-align:center;
+}
+
+.manuscripts button{
+margin:10px;
+padding:10px 20px;
+background:#8B0000;
+color:#FFD700;
+border:none;
+cursor:pointer;
+font-size:16px;
+}
+
+.manuscripts button:hover{
+background:#a30000;
+}
+
+/* MODAL FULLSCREEN */
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100vw;
+height:100vh;
+background:rgba(0,0,0,0.95);
+z-index:9999;
+}
+
+/* PDF HEADER BAR */
+.pdf-header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#111;
+color:#FFD700;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 30px;
+z-index:10000;
+box-sizing:border-box;
+}
+
+/* CONTROLS */
+.pdf-header .controls{
+display:flex;
+align-items:center;
+gap:10px;
+flex-wrap:wrap;
+}
+
+/* BUTTONS */
+.pdf-header button{
+background:#FFD700;
+border:none;
+padding:5px 10px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* PAGE NUMBER */
+#pageIndicator{
+color:white;
+font-size:14px;
+min-width:60px;
+text-align:center;
+}
+
+/* PDF VIEW */
+.modal iframe{
+width:100vw;
+height:calc(100vh - 70px);
+margin-top:70px;
+border:none;
+}
+
+/* CLOSE BUTTON */
+.close{
+position:fixed;
+top:10px;
+right:20px;
+color:white;
+font-size:30px;
+cursor:pointer;
+z-index:10001;
+}
+
+/* NAV BUTTONS */
+.nav-buttons{
+position:absolute;
+bottom:20px;
+width:100%;
+text-align:center;
+z-index:10000;
+}
+
+.nav-buttons button{
+margin:10px;
+padding:10px 20px;
+background:#FFD700;
+border:none;
+font-weight:bold;
+cursor:pointer;
+border-radius:5px;
+}
