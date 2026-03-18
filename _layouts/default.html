@@ -97,8 +97,11 @@ const pdfs = [
 ];
 
 function loadPDF(){
-document.getElementById("pdfFrame").src =
-pdfs[currentIndex] + "#toolbar=0&zoom=" + zoomLevel;
+
+let url = pdfs[currentIndex] +
+"#toolbar=0&zoom=" + zoomLevel + "&t=" + new Date().getTime();
+
+document.getElementById("pdfFrame").src = url;
 
 document.getElementById("pdfTitle").innerText =
 titles[currentIndex];
