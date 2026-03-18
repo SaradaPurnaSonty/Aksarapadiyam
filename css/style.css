@@ -120,35 +120,44 @@ font-size:16px;
 background:#a30000;
 }
 
-/* FULL SCREEN MODAL */
+/* PDF FULLSCREEN */
 .modal{
 display:none;
 position:fixed;
-z-index:9999;
 top:0;
 left:0;
 width:100vw;
 height:100vh;
 background:rgba(0,0,0,0.95);
+z-index:9999;
 }
 
-/* PDF FULLSCREEN */
 .modal iframe{
 width:100vw;
 height:100vh;
 border:none;
 }
 
+.close{
+position:fixed;
+top:15px;
+right:25px;
+color:white;
+font-size:35px;
+cursor:pointer;
+z-index:10000;
+}
+
 /* CLOSE BUTTON */
 .close{
-position:absolute;
+position:fixed;   /* change from absolute */
 top:15px;
 right:25px;
 color:white;
 font-size:35px;
 font-weight:bold;
 cursor:pointer;
-z-index:10000;
+z-index:10001;   /* higher than iframe */
 }
 
 /* NAV BUTTONS OVERLAY */
