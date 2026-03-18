@@ -12,167 +12,253 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
 <style>
-/* ==================== MODAL & PDF VIEWER ==================== */
+/* ================== BODY ================== */
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f9f6f2;
+}
+
+/* HEADER */
+header{
+    background:#8B0000;
+    color:#FFD700;
+    padding:20px 30px; /* reduced for smaller height */
+    border-bottom:4px solid #FFD700;
+}
+
+/* HEADER LAYOUT */
+.header-container{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    position:relative;
+}
+
+/* LOGO */
+.header-container img{
+    height:100px;
+    margin-right:20px;
+}
+
+/* CENTER TITLE */
+.header-container div{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    text-align:center;
+}
+
+/* TITLE */
+header h1 {
+    font-size:40px; /* bigger */
+    margin:0;
+    font-family:'Noto Serif Devanagari', serif;
+    color:#FFD700;
+}
+
+/* NAVIGATION */
+nav{
+    margin-top:15px;
+    text-align:center;
+}
+
+nav a{
+    color:#fff; /* white for Home, Text, Research, Contact */
+    margin:0 20px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:16px;
+}
+
+nav a:hover{
+    color:#FFD700;
+}
+
+/* MAIN CONTENT */
+main{
+    max-width:900px;
+    margin:30px auto;
+    padding:30px;
+    background:white;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    border-top:5px solid #FFD700;
+}
+
+/* FOOTER */
+footer{
+    background:#8B0000;
+    color:#FFD700;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+}
+
+/* SANSKRIT TEXT */
+.sanskrit{
+    font-family:'Noto Serif Devanagari', serif;
+    font-size:22px;
+    line-height:1.8;
+    color:#8B0000;
+}
+
+/* HEADINGS */
+h1, h2, h3{
+    font-family: Georgia, serif;
+    color:#8B0000;
+}
 
 /* MODAL */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.95);
-  z-index: 9999;
-  overflow: hidden;
-  box-sizing: border-box;
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background:rgba(0,0,0,0.95);
+    z-index:9999;
 }
 
 /* PDF HEADER */
-.pdf-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px; /* fixed header height */
-  background: #111;
-  color: #FFD700;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 15px;
-  box-sizing: border-box;
-  z-index: 10000;
+.pdf-header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#111;
+    color:#FFD700;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 20px;
+    z-index:10000;
 }
 
 /* PDF TITLE */
-.pdf-header span#pdfTitle {
-  font-weight: bold;
-  font-size: 16px;
-  max-width: 50%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: #FFD700;
+.pdf-header span#pdfTitle{
+    font-weight:bold;
+    font-size:16px;
+    max-width:50%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
 }
 
 /* PDF HEADER BUTTONS */
-.pdf-header div {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
+.pdf-header div{
+    display:flex;
+    gap:6px;
 }
 
-/* PDF HEADER BUTTON STYLE */
-.pdf-header button {
-  background: #FFD700;
-  border: none;
-  padding: 5px 10px;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 14px;
+/* BUTTON STYLE */
+.pdf-header button{
+    background:#FFD700;
+    border:none;
+    padding:5px 10px;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:4px;
+    font-size:14px;
 }
 
 /* PDF VIEWER */
-#pdfViewer {
-  width: 100%;
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  background: #222;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 70px; /* equal to header height + 10px spacing */
-  box-sizing: border-box;
+#pdfViewer{
+    width:100%;
+    height:100vh;
+    overflow-y:auto;
+    overflow-x:hidden;
+    background:#222;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:70px; /* space for PDF header */
+    box-sizing:border-box;
 }
 
 /* PDF CANVAS */
-#pdfViewer canvas {
-  max-width: 90%;
-  height: auto !important;
-  margin-bottom: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  background: white;
+#pdfViewer canvas{
+    width:90% !important; /* responsive */
+    height:auto !important;
+    margin-bottom:20px;
+    box-shadow:0 0 15px rgba(0,0,0,0.5);
+    background:white;
 }
 
 /* CLOSE BUTTON */
-.close {
-  position: fixed;
-  top: 10px;
-  right: 20px;
-  color: white;
-  font-size: 25px;
-  cursor: pointer;
-  z-index: 10001;
+.close{
+    position:fixed;
+    top:10px;
+    right:20px;
+    color:white;
+    font-size:25px;
+    cursor:pointer;
+    z-index:10001;
 }
 
-/* NAVIGATION BUTTONS INSIDE MODAL */
-.nav-buttons {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
-  z-index: 10000;
+/* MANUSCRIPTS BUTTONS */
+.manuscripts button{
+    display:block;
+    width:100%;
+    background:white;
+    color:#8B0000;
+    border:1px solid #ccc;
+    padding:12px;
+    margin:8px 0;
+    text-align:left;
+    cursor:pointer;
+    font-size:16px;
 }
 
-.nav-buttons button {
-  margin: 10px;
-  padding: 10px 20px;
-  background: #FFD700;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
+.manuscripts button:hover{
+    background:#f3f3f3;
 }
 </style>
-
 </head>
+
 <body>
 
 <header>
-  <div class="header-container">
-    <img src="{{ site.baseurl }}/assets/logo.png" alt="University Logo">
-    <div>
-      <h1 style="margin:0; font-size:36px;">Akṣarapadīyam</h1>
-      <p style="margin:0; font-size:14px;">A Vedic Linguistic Research Project</p>
-      <p style="margin:0; font-size:13px;">University of Applied Vedic Sciences (Online)</p>
-    </div>
-  </div>
+<div class="header-container">
+<img src="{{ site.baseurl }}/assets/logo.png" alt="University Logo">
+<div>
+<h1>Akṣarapadīyam</h1>
+<p style="font-size:14px; margin:2px 0;">A Vedic Linguistic Research Project</p>
+<p style="font-size:13px; margin:2px 0;">University of Applied Vedic Sciences (Online)</p>
+</div>
+</div>
 
-  <nav>
-    <a href="{{ site.baseurl }}/" style="color:#fff;">Home</a>
-    <a href="{{ site.baseurl }}/text/" style="color:#fff;">Text</a>
-    <a href="{{ site.baseurl }}/research/" style="color:#fff;">Research</a>
-    <a href="{{ site.baseurl }}/contact/" style="color:#fff;">Contact</a>
-  </nav>
+<nav>
+<a href="{{ site.baseurl }}/">Home</a>
+<a href="{{ site.baseurl }}/text/">Text</a>
+<a href="{{ site.baseurl }}/research/">Research</a>
+<a href="{{ site.baseurl }}/contact/">Contact</a>
+</nav>
 </header>
 
 <main>
-  {{ content }}
+{{ content }}
 </main>
 
 <footer>
-  <p>© 2025 Akṣarapadīyam Research Project</p>
-  <p>Sarada Purna Sonty | University of Applied Vedic Sciences (Online)</p>
-  <p style="font-size:12px;">All rights reserved. This site is part of an academic research initiative in Vedic linguistics.</p>
+<p>© 2025 Akṣarapadīyam Research Project</p>
+<p>Sarada Purna Sonty | University of Applied Vedic Sciences (Online)</p>
+<p style="font-size:12px;">All rights reserved. This site is part of an academic research initiative in Vedic linguistics.</p>
 </footer>
 
 <!-- ===== PDF MODAL ===== -->
 <div id="pdfModal" class="modal">
-  <div class="pdf-header">
-    <span id="pdfTitle">Title</span>
-    <div>
-      <button onclick="prevPDF()">◀ Prev</button>
-      <span id="pageIndicator">0/0</span>
-      <button onclick="nextPDF()">Next ▶</button>
-      <button onclick="zoomOut()">-</button>
-      <button onclick="zoomIn()">+</button>
-      <button onclick="closePDF()">✖ Close</button>
+    <div class="pdf-header">
+        <span id="pdfTitle">Title</span>
+        <div>
+            <button onclick="prevPDF()">◀ Prev</button>
+            <span id="pageIndicator">0/0</span>
+            <button onclick="nextPDF()">Next ▶</button>
+            <button onclick="zoomOut()">-</button>
+            <button onclick="zoomIn()">+</button>
+            <button onclick="closePDF()">✖ Close</button>
+        </div>
     </div>
-  </div>
-  <div id="pdfViewer"></div>
+    <div id="pdfViewer"></div>
 </div>
 
 <script>
@@ -212,66 +298,70 @@ const pdfs = [
 "{{ site.baseurl }}/Script13.pdf"
 ];
 
+// Render PDF with high resolution
 function renderPDF(url){
-  pdfjsLib.getDocument(url).promise.then(function(pdf){
-    pdfDoc = pdf;
-    renderAllPages();
-  });
+    pdfjsLib.getDocument(url).promise.then(function(pdf){
+        pdfDoc = pdf;
+        renderAllPages();
+    });
 }
 
 function renderAllPages(){
-  let container = document.getElementById("pdfViewer");
-  container.innerHTML = "";
-
-  for(let i = 1; i <= pdfDoc.numPages; i++){
-    pdfDoc.getPage(i).then(function(page){
-      let viewport = page.getViewport({ scale: scale });
-      let canvas = document.createElement("canvas");
-      let ctx = canvas.getContext("2d");
-      canvas.height = viewport.height;
-      canvas.width = viewport.width;
-      container.appendChild(canvas);
-
-      page.render({ canvasContext: ctx, viewport: viewport }).promise.then(()=>{
-        if(i === 1){
-          document.getElementById("pageIndicator").innerText = `1 - ${pdfDoc.numPages}`;
-        }
-      });
-    });
-  }
+    const container = document.getElementById("pdfViewer");
+    container.innerHTML = "";
+    
+    for(let i=1;i<=pdfDoc.numPages;i++){
+        pdfDoc.getPage(i).then(function(page){
+            const viewport = page.getViewport({scale: scale});
+            const canvas = document.createElement("canvas");
+            const ctx = canvas.getContext("2d");
+            
+            // set canvas at PDF resolution to avoid blurring
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+            
+            container.appendChild(canvas);
+            
+            page.render({canvasContext: ctx, viewport: viewport}).promise.then(()=>{
+                if(i===1){
+                    document.getElementById("pageIndicator").innerText = `1 - ${pdfDoc.numPages}`;
+                }
+            });
+        });
+    }
 }
 
 function openPDF(index){
-  currentIndex = index;
-  document.getElementById("pdfModal").style.display = "block";
-  document.body.style.overflow = "hidden";
-  document.getElementById("pdfTitle").innerText = titles[index];
-  renderPDF(pdfs[index]);
+    currentIndex = index;
+    document.getElementById("pdfModal").style.display = "block";
+    document.body.style.overflow = "hidden";
+    document.getElementById("pdfTitle").innerText = titles[index];
+    renderPDF(pdfs[index]);
 }
 
 function closePDF(){
-  document.getElementById("pdfModal").style.display = "none";
-  document.body.style.overflow = "auto";
+    document.getElementById("pdfModal").style.display = "none";
+    document.body.style.overflow = "auto";
 }
 
 function nextPDF(){
-  currentIndex = (currentIndex + 1) % pdfs.length;
-  openPDF(currentIndex);
+    currentIndex = (currentIndex+1)%pdfs.length;
+    openPDF(currentIndex);
 }
 
 function prevPDF(){
-  currentIndex = (currentIndex - 1 + pdfs.length) % pdfs.length;
-  openPDF(currentIndex);
+    currentIndex = (currentIndex-1+pdfs.length)%pdfs.length;
+    openPDF(currentIndex);
 }
 
 function zoomIn(){
-  scale += 0.2;
-  renderPDF(pdfs[currentIndex]);
+    scale += 0.2;
+    renderPDF(pdfs[currentIndex]);
 }
 
 function zoomOut(){
-  scale = Math.max(0.6, scale - 0.2);
-  renderPDF(pdfs[currentIndex]);
+    scale = Math.max(0.6,scale-0.2);
+    renderPDF(pdfs[currentIndex]);
 }
 </script>
 
