@@ -108,24 +108,34 @@ renderPage(1);
 
 function renderPage(num){
 pdfDoc.getPage(num).then(function(page){
-let viewport = page.getViewport({ scale: scale });
+
+let container = document.getElementById("pdfViewer");
+
+/* ✅ AUTO FIT WIDTH */
+let desiredWidth = container.clientWidth * 0.8;   // 80% of screen
+let viewport = page.getViewport({ scale: 1 });
+
+let scale = desiredWidth / viewport.width;
+let scaledViewport = page.getViewport({ scale: scale });
 
 let canvas = document.createElement("canvas");
 let ctx = canvas.getContext("2d");
 
-canvas.height = viewport.height;
-canvas.width = viewport.width;
+canvas.height = scaledViewport.height;
+canvas.width = scaledViewport.width;
 
-document.getElementById("pdfViewer").innerHTML = "";
-document.getElementById("pdfViewer").appendChild(canvas);
+container.innerHTML = "";
+container.appendChild(canvas);
 
 page.render({
 canvasContext: ctx,
-viewport: viewport
+viewport: scaledViewport
 });
 
+/* PAGE NUMBER */
 document.getElementById("pageIndicator").innerText =
 num + " / " + pdfDoc.numPages;
+
 });
 }
 
