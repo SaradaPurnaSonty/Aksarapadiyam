@@ -4,12 +4,45 @@ margin:0;
 background:#f9f6f2;
 }
 
-/* HEADER */
-header{
-background:#8B0000; /* deep red */
-color:#FFD700; /* gold */
-padding:20px;
-text-align:center;
+/* HEADER BAR */
+.pdf-header{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+background:#111;
+color:#FFD700;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 20px;
+z-index:10000;
+}
+
+.pdf-header .controls{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.pdf-header button{
+background:#FFD700;
+border:none;
+padding:5px 10px;
+font-weight:bold;
+cursor:pointer;
+}
+
+#pageIndicator{
+color:white;
+font-size:14px;
+}
+
+/* PUSH PDF BELOW HEADER */
+.modal iframe{
+width:100vw;
+height:calc(100vh - 60px);
+margin-top:60px;
 }
 
 /* LOGO + TITLE */
