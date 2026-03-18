@@ -1,184 +1,238 @@
-/* BODY */
-body{
+/* ===== BODY ===== */
+body {
     font-family: Arial, sans-serif;
-    margin:0;
-    background:#f9f6f2;
+    margin: 0;
+    background: #f9f6f2;
 }
 
-/* HEADER */
-header{
-    background:#8B0000;
-    color:#FFD700;
-    padding:25px 40px;
-    border-bottom:4px solid #FFD700;
+/* ===== HEADER ===== */
+header {
+    background: #8B0000;
+    color: #FFD700;
+    padding: 25px 40px;
+    border-bottom: 4px solid #FFD700;
 }
 
 /* HEADER LAYOUT */
-.header-container{
-    display:flex;
-    align-items:center;
-    justify-content:flex-start;
-    position:relative;
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
 }
 
 /* LOGO */
-.header-container img{
-    height:120px;   /* bigger */
-    margin-right:20px;
+.header-container img {
+    height: 120px;   /* bigger */
+    margin-right: 20px;
 }
 
 /* CENTER TITLE */
-.header-container div{
-    position:absolute;
-    left:50%;
-    transform:translateX(-50%);
-    text-align:center;
+.header-container div {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
 }
 
-
 /* TITLE */
-
 header h1 {
-    font-size: 36px; /* adjust bigger */
+    font-size: 36px; /* bigger */
     margin: 0;
     font-family: 'Noto Serif Devanagari', serif;
     color: #FFD700;
 }
 
 /* TEXT */
-.tagline{
-    font-size:14px;
-    margin:2px 0;
+.tagline {
+    font-size: 14px;
+    margin: 2px 0;
 }
 
-.university{
-    font-size:13px;
-    margin:2px 0;
+.university {
+    font-size: 13px;
+    margin: 2px 0;
 }
 
 /* NAVIGATION */
-nav{
-    margin-top:20px;
-    text-align:center;
+nav {
+    margin-top: 20px;
+    text-align: center;
 }
 
-nav a{
-    color:#FFD700;
-    margin:0 20px;
-    text-decoration:none;
-    font-weight:bold;
+nav a {
+    color: #ffffff; /* white nav links */
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-nav a:hover{
-    text-decoration:underline;
+nav a:hover {
+    text-decoration: underline;
+    color: #FFD700; /* yellow on hover */
 }
 
-
-/* MAIN CONTENT */
-main{
-    max-width:900px;
-    margin:30px auto;
-    padding:30px;
-    background:white;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-    border-top:5px solid #FFD700;
+/* ===== MAIN CONTENT ===== */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-top: 5px solid #FFD700;
 }
 
 /* FOOTER */
-footer{
-    background:#8B0000;
-    color:#FFD700;
-    text-align:center;
-    padding:20px;
-    font-size:14px;
+footer {
+    background: #8B0000;
+    color: #FFD700;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
 }
 
 /* SANSKRIT TEXT */
-.sanskrit{
-    font-family:'Noto Serif Devanagari', serif;
-    font-size:22px;
-    line-height:1.8;
-    color:#8B0000;
+.sanskrit {
+    font-family: 'Noto Serif Devanagari', serif;
+    font-size: 22px;
+    line-height: 1.8;
+    color: #8B0000;
 }
 
 /* HEADINGS */
-h1, h2, h3{
+h1, h2, h3 {
     font-family: Georgia, serif;
-    color:#8B0000;
+    color: #8B0000;
 }
 
-/* MODAL */
-.modal{
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100vw;
-    height:100vh;
-    background:rgba(0,0,0,0.95);
-    z-index:9999;
+/* MANUSCRIPT BUTTONS */
+.manuscripts {
+    text-align: center;
+}
+
+.manuscripts button {
+    display: block;
+    width: 100%;
+    background: white;
+    color: #8B0000;
+    border: 1px solid #ccc;
+    padding: 12px;
+    margin: 8px 0;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.manuscripts button:hover {
+    background: #f3f3f3;
+}
+
+/* ===== PDF MODAL ===== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.95);
+    z-index: 9999;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 /* PDF HEADER */
-.pdf-header{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:#111;
-    color:#FFD700;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:10px 30px;
+.pdf-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #111;
+    color: #FFD700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    z-index: 10000;
+    flex-wrap: wrap;
 }
 
-#pdfViewer{
-    width:100%;
-    height:calc(100vh - 70px);
-    overflow:auto;
-    background:#222;
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-    padding-top:20px;
+/* PDF HEADER TITLE */
+.pdf-header span#pdfTitle {
+    font-weight: bold;
+    font-size: 18px;
+    max-width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-/* SINGLE CLEAN CANVAS STYLE */
-#pdfViewer{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    padding-top:20px;
+/* PDF HEADER BUTTONS */
+.pdf-header div {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
-#pdfViewer canvas{
-    margin-bottom:20px;
-    box-shadow:0 0 15px rgba(0,0,0,0.5);
-    background:white;
-}
-/* BUTTONS */
-button{
-    background:#FFD700;
-    border:none;
-    padding:8px 12px;
-    font-weight:bold;
-    cursor:pointer;
+.pdf-header button {
+    background: #FFD700;
+    border: none;
+    padding: 6px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
-
-.manuscripts button{
-    display:block;
-    width:100%;
-    background:white;
-    color:#8B0000;
-    border:1px solid #ccc;
-    padding:12px;
-    margin:8px 0;
-    text-align:left;
-    cursor:pointer;
-    font-size:16px;
+/* PDF VIEWER */
+#pdfViewer {
+    width: 100%;
+    height: calc(100vh - 60px); /* leave space for header */
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
 }
 
-.manuscripts button:hover{
-    background:#f3f3f3;
+/* PDF CANVAS */
+#pdfViewer canvas {
+    max-width: 95%;
+    width: auto;
+    height: auto !important;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    background: white;
+}
+
+/* CLOSE BUTTON */
+.close {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 10001;
+}
+
+/* NAV BUTTONS (NEXT / PREV / ZOOM) */
+.nav-buttons {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 10000;
+}
+
+.nav-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    background: #FFD700;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
 }
