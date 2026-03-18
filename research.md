@@ -40,3 +40,16 @@ Click any manuscript to view.
   </div>
 </div>
 
+<!-- FULLSCREEN POPUP -->
+<div id="pdfModal" class="modal">
+
+<span class="close" onclick="closePDF()">&times;</span>
+
+<iframe id="pdfFrame"></iframe>
+
+<div class="nav-buttons">
+<button onclick="prevPDF()">⬅ Previous</button>
+<button onclick="nextPDF()">Next ➡</button>
+</div>
+
+</div>
