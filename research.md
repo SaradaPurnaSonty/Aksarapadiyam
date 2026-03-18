@@ -4,36 +4,90 @@ title: Research
 permalink: /research/
 ---
 
-# Research
+# Research Archive
 
-This section contains the manuscript research documents for the **Akṣarapadīyam** project.
+Explore the manuscript collection of **Akṣarapadīyam**.
 
-## Manuscripts
+---
 
-1. [वेदाक्षर स्वरूपं (Form Of The Vēdākshara)](../Script1.pdf)
-2. [वेदाक्षरोच्चारण (Pronunciation Of The Vēdākshara)](../Script2.pdf)
-3. [वेदाक्षर यज्ञं  (Origination Of The Vēdākshara)](../Script3.pdf)
-4. [वेदाक्षर निर्माणं (Formation of the Vēdic Language)](../Script4.pdf)
-5. [वेदशास्त्राणि - कल्पशास्त्रम् (Vēda Śāstras - Kalpa-śāstra) ](../Script5.pdf)
-6. [इन्द्रिय देवता अवधारणा  (Concept Of Senses)](../Script6.pdf)
-7. [उखा  मंत्राः - उखाग्निः (The Transformative Power of Ukha)](../Script7.pdf)
-8. [मन्त्रपुष्पम् (Mantrapushpam)](../Script8.pdf)
-9. [य एवं वेदा -The One Who Knows Thus](../Script9.pdf)
-10. [वैदिक पथः(The Vēdic Path)](../Script10.pdf)
-11. [वैदिकरूपस्य प्रयोजनम्  (The Nature and Purpose of the Vēda)](../Script11.pdf)
-12. [चिनुति (A Study of Divine Manifestation through Yajna)](../Script12.pdf)
-13. [वैदिक शास्त्र दर्शन -वाज्ञज्ञ  (Vēdic Vēdākshara-Insight -The Yajna of Speech)](../Script13.pdf)
+## 📜 Manuscripts
 
-## References
+---
 
-<div class="references">
+### वेदाक्षर स्वरूपं
 
-<div class="citation">
-Sonty, S. P. (2025). *Akṣarapadīyam: A Study of Vedic Akṣaras and Padas*.
-</div>
+<iframe src="{{ site.baseurl }}/Script1.pdf#toolbar=0" width="100%" height="500px"></iframe>
 
-<div class="citation">
-Traditional Vedic Manuscripts Collection (Scripts 1–13).
-</div>
+---
 
-</div>
+### वेदाक्षरोच्चारण
+
+<iframe src="{{ site.baseurl }}/Script2.pdf#toolbar=0" width="100%" height="500px"></iframe>
+
+---
+
+### वेदाक्षर यज्ञं
+
+<iframe src="{{ site.baseurl }}/Script3.pdf#toolbar=0" width="100%" height="500px"></iframe>
+
+---
+
+### वेदाक्षर निर्माणं
+
+<iframe src="{{ site.baseurl }}/Script4.pdf#toolbar=0" width="100%" height="500px"></iframe>
+
+---
+
+### कल्पशास्त्रम्
+
+<iframe src="{{ site.baseurl }}/Script5.pdf#toolbar=0" width="100%" height="500px"></iframe>
+
+---
+
+### इन्द्रिय देवता
+
+<iframe src="{{ site.baseurl }}/Script6.pdf#toolbar=0" width="100%" height="500px"></iframe>
+
+---
+
+### उखा मंत्राः
+
+<iframe src="{{ site.baseurl }}/Script7.pdf#toolbar=0" width="100%" height="500px"></iframe>
+
+---
+
+### मन्त्रपुष्पम्
+
+<iframe src="{{ site.baseurl }}/Script8.pdf#toolbar=0" width="100%" height="500px"></iframe>
+
+---
+
+### य एवं वेद
+
+<iframe src="{{ site.baseurl }}/Script9.pdf#toolbar=0" width="100%" height="500px"></iframe>
+
+---
+
+### वैदिक पथः
+
+<iframe src="{{ site.baseurl }}/Script10.pdf#toolbar=0" width="100%" height="500px"></iframe>
+
+---
+
+### वैदिकरूपस्य प्रयोजनम्
+
+<iframe src="{{ site.baseurl }}/Script11.pdf#toolbar=0" width="100%" height="500px"></iframe>
+
+---
+
+### चिनुति
+
+<iframe src="{{ site.baseurl }}/Script12.pdf#toolbar=0" width="100%" height="500px"></iframe>
+
+---
+
+### वाज्ञज्ञ
+
+<iframe src="{{ site.baseurl }}/Script13.pdf#toolbar=0" width="100%" height="500px"></iframe>
+
+---
