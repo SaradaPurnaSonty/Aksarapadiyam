@@ -6,88 +6,37 @@ permalink: /research/
 
 # Research Archive
 
-Explore the manuscript collection of **Akṣarapadīyam**.
+Click any manuscript to view.
 
 ---
 
-## 📜 Manuscripts
+<div class="manuscripts">
 
----
+<button onclick="openPDF(0)">वेदाक्षर स्वरूपं (Form Of The Vēdākshara)</button>
+<button onclick="openPDF(1)">वेदाक्षरोच्चारण (Pronunciation Of The Vēdākshara)</button>
+<button onclick="openPDF(2)">वेदाक्षर यज्ञं (Origination Of The Vēdākshara)</button>
+<button onclick="openPDF(3)">वेदाक्षर निर्माणं (Formation of the Vēdic Language)</button>
+<button onclick="openPDF(4)">वेदशास्त्राणि - कल्पशास्त्रम् (Vēda Śāstras - Kalpa-śāstra)</button>
+<button onclick="openPDF(5)">इन्द्रिय देवता अवधारणा (Concept Of Senses)</button>
+<button onclick="openPDF(6)">उखा मंत्राः - उखाग्निः (The Transformative Power of Ukha)</button>
+<button onclick="openPDF(7)">मन्त्रपुष्पम् (Mantrapushpam)</button>
+<button onclick="openPDF(8)">य एवं वेद (The One Who Knows Thus)</button>
+<button onclick="openPDF(9)">वैदिक पथः (The Vēdic Path)</button>
+<button onclick="openPDF(10)">वैदिकरूपस्य प्रयोजनम्</button>
+<button onclick="openPDF(11)">चिनुति (A Study of Divine Manifestation through Yajna)</button>
+<button onclick="openPDF(12)">वैदिक शास्त्र दर्शन -वाज्ञज्ञ  (Vēdic Vēdākshara-Insight -The Yajna of Speech)</button>
 
-### वेदाक्षर स्वरूपं (Form Of The Vēdākshara)
+</div>
 
-<iframe src="{{ site.baseurl }}/Script1.pdf#toolbar=0" width="100%" height="500px"></iframe>
+<!-- POPUP VIEWER -->
+<div id="pdfModal" class="modal">
+  <span class="close" onclick="closePDF()">&times;</span>
 
----
+  <iframe id="pdfFrame" width="100%" height="500px"></iframe>
 
-### वेदाक्षरोच्चारण (Pronunciation Of The Vēdākshara)
+  <div class="nav-buttons">
+    <button onclick="prevPDF()">⬅ Previous</button>
+    <button onclick="nextPDF()">Next ➡</button>
+  </div>
+</div>
 
-<iframe src="{{ site.baseurl }}/Script2.pdf#toolbar=0" width="100%" height="500px"></iframe>
-
----
-
-### वेदाक्षर यज्ञं (Origination Of The Vēdākshara)
-
-<iframe src="{{ site.baseurl }}/Script3.pdf#toolbar=0" width="100%" height="500px"></iframe>
-
----
-
-### वेदाक्षर निर्माणं (Formation of the Vēdic Language)
-
-<iframe src="{{ site.baseurl }}/Script4.pdf#toolbar=0" width="100%" height="500px"></iframe>
-
----
-
-### वेदशास्त्राणि - कल्पशास्त्रम् (Vēda Śāstras - Kalpa-śāstra)
-
-<iframe src="{{ site.baseurl }}/Script5.pdf#toolbar=0" width="100%" height="500px"></iframe>
-
----
-
-### इन्द्रिय देवता अवधारणा  (Concept Of Senses)
-
-<iframe src="{{ site.baseurl }}/Script6.pdf#toolbar=0" width="100%" height="500px"></iframe>
-
----
-
-### उखा मंत्राः - उखाग्निः (The Transformative Power of Ukha)
-
-<iframe src="{{ site.baseurl }}/Script7.pdf#toolbar=0" width="100%" height="500px"></iframe>
-
----
-
-### मन्त्रपुष्पम् (Mantrapushpam)
-
-<iframe src="{{ site.baseurl }}/Script8.pdf#toolbar=0" width="100%" height="500px"></iframe>
-
----
-
-### य एवं वेदा (The One Who Knows Thus)
-
-<iframe src="{{ site.baseurl }}/Script9.pdf#toolbar=0" width="100%" height="500px"></iframe>
-
----
-
-### वैदिक पथः (The Vēdic Path)
-
-<iframe src="{{ site.baseurl }}/Script10.pdf#toolbar=0" width="100%" height="500px"></iframe>
-
----
-
-### वैदिकरूपस्य प्रयोजनम्  (The Nature and Purpose of the Vēda)
-
-<iframe src="{{ site.baseurl }}/Script11.pdf#toolbar=0" width="100%" height="500px"></iframe>
-
----
-
-### चिनुति (A Study of Divine Manifestation through Yajna)
-
-<iframe src="{{ site.baseurl }}/Script12.pdf#toolbar=0" width="100%" height="500px"></iframe>
-
----
-
-### वैदिक शास्त्र दर्शन -वाज्ञज्ञ  (Vēdic Vēdākshara-Insight -The Yajna of Speech)
-
-<iframe src="{{ site.baseurl }}/Script13.pdf#toolbar=0" width="100%" height="500px"></iframe>
-
----
