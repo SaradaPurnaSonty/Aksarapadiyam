@@ -152,8 +152,27 @@ h1, h2, h3{
 }
 
 #pdfViewer canvas{
-    margin:20px auto;
-    display:block;
+    background:white;
+    box-shadow:0 0 20px rgba(0,0,0,0.6);
+    max-width:900px;
+    width:100%;
+}
+
+#pdfViewer{
+    width:100%;
+    height:calc(100vh - 70px);
+    overflow:auto;
+    background:#222;
+    display:flex;
+    justify-content:center;   /* center horizontally */
+    align-items:flex-start;
+    padding-top:20px;
+}
+
+#pdfViewer canvas{
+    background:white;
+    box-shadow:0 0 15px rgba(0,0,0,0.5);
+    border-radius:4px;
 }
 
 /* BUTTONS */
