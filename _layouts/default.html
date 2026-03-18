@@ -59,9 +59,10 @@ All rights reserved. This site is part of an academic research initiative in Ved
 </footer>
 
 <!-- ✅ ADD HERE -->
+
 <script>
 let currentIndex = 0;
-let zoomLevel = 125;
+let zoomLevel = 150;
 
 const titles = [
 "वेदाक्षर स्वरूपं (Form Of The Vēdākshara)",
@@ -99,7 +100,8 @@ function loadPDF(){
 document.getElementById("pdfFrame").src =
 pdfs[currentIndex] + "#toolbar=0&zoom=" + zoomLevel;
 
-document.getElementById("pdfTitle").innerText = titles[currentIndex];
+document.getElementById("pdfTitle").innerText =
+titles[currentIndex];
 
 document.getElementById("pageIndicator").innerText =
 (currentIndex + 1) + " / " + pdfs.length;
@@ -114,7 +116,6 @@ loadPDF();
 
 function closePDF(){
 document.getElementById("pdfModal").style.display = "none";
-document.getElementById("pdfFrame").src = "";
 document.body.style.overflow = "auto";
 }
 
@@ -134,7 +135,7 @@ loadPDF();
 }
 
 function zoomOut(){
-zoomLevel = Math.max(50, zoomLevel - 25);
+zoomLevel = Math.max(75, zoomLevel - 25);
 loadPDF();
 }
 </script>
