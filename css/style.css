@@ -159,3 +159,21 @@ button{
     font-weight:bold;
     cursor:pointer;
 }
+
+
+.manuscripts button{
+    display:block;
+    width:100%;
+    background:white;
+    color:#8B0000;
+    border:1px solid #ccc;
+    padding:12px;
+    margin:8px 0;
+    text-align:left;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.manuscripts button:hover{
+    background:#f3f3f3;
+}
